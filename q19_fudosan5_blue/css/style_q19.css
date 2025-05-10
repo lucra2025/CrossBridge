@@ -1,0 +1,339 @@
+@charset "utf-8";
+
+
+/*---------------------------------------------------------------------------
+CMS用に追加
+---------------------------------------------------------------------------*/
+
+	/*画面幅899px以下の追加指定*/
+	@media screen and (max-width:899px) {
+
+	/*2カラムの場合
+	---------------------------------------------------------------------------*/
+	.main {
+		order: 0 !important;	/*mainを先に表示させる。*/
+	}
+
+	}/*追加設定ここまで*/
+
+
+/*ヘッダー下のメニューへの追加設定
+---------------------------------------------------------------------------*/
+	/*画面幅500px以下の追加指定*/
+	@media screen and (max-width:500px) {
+
+	#header-menu ul {
+		display: none !important;	/*ヘッダーメニューを非表示に*/
+	}
+
+	}/*追加設定ここまで*/
+
+
+/*NEW,UPマークなどのアイコン
+---------------------------------------------------------------------------*/
+/*NEW,UPoption1-icon,option2-icon共通*/
+.newicon, .upicon, .option1-icon, .option2-icon {
+	display: inline-block;
+	padding: 0.3rem 0.5rem;	/*上下、左右への余白*/
+	border-radius: 3px;		/*角を少しだけ丸くする指定*/
+	font-size: 0.7rem;		/*文字サイズを70%に*/
+	line-height: 1;			/*行間*/
+	margin-right: 2px;		/*右側に空けるスペース。アイコンが並んだ場合の隙間になります。*/
+}
+
+/*newiconへの追加指定。*/
+.newicon {
+	background: #f00;
+	color: #fff;
+}
+
+/*upiconへの追加指定。*/
+.upicon {
+	background: #257dce;
+	color: #fff;
+}
+
+/*option1-iconへの追加指定。*/
+.option1-icon {
+	background: #fff;
+	color: #777;
+	border-radius: 3px;
+	border: 1px solid #999;
+}
+
+/*option2-iconへの追加指定。*/
+.option2-icon {
+	background: #ccc;
+	color: #555;
+}
+
+
+/*option
+---------------------------------------------------------------------------*/
+/*option1*/
+.option1 {
+	font-size: 0.7rem;	/*文字サイズを70%に*/
+	position: absolute;
+	left: -0.5rem;
+	top: -0.5rem;
+	background: #ee2d2d;
+	color: #fff;
+	width: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	border-radius: 50%;
+}
+
+/*option2*/
+.option2 {
+	font-size: 0.7rem;	/*文字サイズを70%に*/
+	display: inline-block;
+	width: 200px;		/*幅*/
+	text-align: center;	/*テキストをセンタリング*/
+	position: absolute;	/*絶対配置する指定*/
+	top: 0px;	/*上からの配置場所。*/
+	left: 0px;	/*左からの配置場所。*/
+	transform: translate(-60px, 20px) rotate(-30deg);	/*translateは移動する距離(X軸, Y軸)でrotateは回転*/
+	box-shadow: 0px 3px 2px rgba(0,0,0,0.2);	/*影*/
+	background: #ccc;
+	color: #777;
+}
+
+
+/*box1設定
+---------------------------------------------------------------------------*/
+/*ボックス全体の設定*/
+.box1 {
+	background: #fff;
+	border: 1px solid #ccc;
+	padding: 10px;
+	border-radius: 5px;
+	margin-bottom: 1rem;
+}
+
+/*box1内で使った場合、下のマージンをなくす*/
+.box1 .submenu {
+	margin-bottom: 0;
+}
+
+
+/*開閉メニューに追加
+---------------------------------------------------------------------------*/
+#menubar h3 {
+	font-size: 1.2rem;
+	padding: 7px 2rem;
+	background: #eee;	/*背景色*/
+	border-radius: 30px;
+	color: #555;
+}
+
+
+/*ページャー
+---------------------------------------------------------------------------*/
+/*ブロック全体*/
+.pager {
+	margin-top: 3rem;		/*上に空けるスペース*/
+	margin-bottom: 3rem;	/*下に空けるスペース*/
+	text-align: center;		/*テキストをセンタリング*/
+	color: #999;			/*文字色*/
+}
+
+/*ボタン一個あたり*/
+.pager a {
+	display: inline-block;text-decoration: none;
+	margin-bottom: 5px;		/*下に空けるスペース。ボタンが２段になった場合用。*/
+	padding: 0.5rem 1rem;	/*ボタン内の余白。上下、左右への順番。*/
+	border: 1px solid #999;	/*枠線の幅、線種、色*/
+	background: #fff;		/*背景色*/
+	color: #555;			/*文字色*/
+}
+
+/*マウスオン時*/
+.pager a:hover {
+	background: #fff;	/*背景色*/
+	color: #999;		/*文字色*/
+	border: 1px solid #333;	/*枠線の幅、線種、色*/
+}
+
+/*リンクのないボタン*/
+.pager span {
+	display: inline-block;
+	margin-bottom: 5px;		/*下に空けるスペース。ボタンが２段になった場合用。*/
+	padding: 0.5rem 1rem;	/*ボタン内の余白。上下、左右への順番。*/
+	border: 1px solid #ccc;	/*枠線の幅、線種、色*/
+	background: rgba(0,0,0,0.1);	/*背景色。0,0,0は黒、0.1は色が10%出た状態*/
+}
+
+
+/*３列タイプのボックス（grid）
+---------------------------------------------------------------------------*/
+.list-grid .list {width: auto;margin: 0;}
+.list:nth-of-type(2n) {margin: 0;}
+
+/*listブロック全体を囲むブロック*/
+.list-grid {
+    display: grid;
+ 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));	/*列の数とサイズを自動調整する設定。*/
+	gap: 2vw;	/*マージン的な指定。画面幅を100vwとした単位。*/
+}
+
+/*ボックス一個あたり*/
+.list-grid .list {
+	max-width: 400px;	/*最大幅*/
+}
+
+	/*画面幅900px以上の追加指定*/
+	@media screen and (min-width:900px) {
+
+	/*トップページのおすすめ物件ブロック*/
+	.list-grid.pickup {
+		grid-template-columns: repeat(4, 1fr);	/*4列にする指定。2列にしたければrepeat(2, 1fr)とする。*/
+		gap: 2vw;
+	}
+	
+	}/*追加指定ここまで*/
+
+
+/*list
+---------------------------------------------------------------------------*/
+.list {
+	position: relative;
+}
+
+.list.sumi figure img {
+	opacity: 0.4;	/*ご契約済み、SOLDOUT系の画像の透明度を下げる。そのままの色にしたいならこの行削除。*/
+}
+
+
+/*詳細ページで使っている「ご契約済み」の大きなボタン
+---------------------------------------------------------------------------*/
+.sumi-btn {
+	display: inline-block;
+	font-size: 1.8rem;		/*文字サイズを1.8倍*/
+	letter-spacing: 0.1em;	/*文字間隔を少しだけ広く*/
+	background: #eee;		/*背景色*/
+	color: #999;			/*文字色*/
+	padding: 0 1.5rem;		/*上下、左右へのボタン内の余白*/
+	border-radius: 5px;		/*角を少し丸くする*/
+	border: 1px solid #ccc;	/*枠線の幅、線種、色*/
+}
+
+
+/*サブコンテンツで使用する横長タイプのボックス
+---------------------------------------------------------------------------*/
+/*ボックス１個あたり*/
+.list-normal-sub .list {
+	display: flex;
+	flex-direction: row;
+	padding: 0.3rem 0;	/*上下、左右へのボックス内の余白*/
+	width: auto;
+	margin-right: 0;
+	margin-bottom: 1rem;
+	box-shadow: none;
+}
+
+.list-normal-sub .list div {
+	flex: 1;
+}
+
+/*ボックス内のfigure画像*/
+.list-normal-sub .list figure {
+	width: 30%;
+	margin: 0;
+	margin-right: 0.5rem;
+}
+
+/*ボックス内のh4タグ*/
+.list-normal-sub .list h4 {
+	margin: 0;
+	line-height: 1;
+}
+.list-normal-sub .list h4 a  {
+	color: inherit;
+}
+
+/*ボックス内のpタグ*/
+.list-normal-sub .list p {
+	margin: 0 !important;
+	font-size: 0.7em;
+}
+
+
+/*list内のtableっぽく見える所
+---------------------------------------------------------------------------*/
+/*ボックス全体*/
+dl.line2 {
+	margin: 0;
+	display: grid;
+	grid-template-columns: auto 1fr;	/*２列のうち、左は内容に応じて自動、残りを右側に割り当て*/
+	font-size: 0.7em;
+	border-top: 1px solid #ccc;
+}
+dl.line2 dt, dl.line2 dd {
+	border-bottom: 1px solid #ccc;	/*枠線の幅、線種、色*/
+	padding: 0 0.5rem;				/*上、左右への余白*/
+}
+dl.line2 dt {
+	background: #eee;	/*背景色*/
+}
+dl.line2 dd {
+	min-width: 5rem;
+}
+
+
+/*詳細ページ用
+---------------------------------------------------------------------------*/
+#bukken_image {
+	display: block;
+	margin: 0 auto;
+	max-height: 50vh;
+	width: auto;
+}
+
+/*サムネイル画像*/
+.thumbnail {
+	width: 80px;
+	border: 1px solid #dcdcdc;
+	margin-bottom: 5px;
+}
+.thumbnail:hover {
+	border: 1px solid #999;
+}
+
+
+/*パノラマ画像
+---------------------------------------------------------------------------*/
+.ofx {overflow-x: hidden;}
+
+.panorama-img {width: 600px !important;height: 400px !important;}
+
+	/*画面幅600px以下の設定*/
+	@media screen and (max-width:600px){
+	
+	.panorama-img {width: 450px !important;height: 300px !important;}
+	
+	}/*追加指定ここまで*/
+
+/*ta1
+---------------------------------------------------------------------------*/
+.ta1 {
+	table-layout: fixed;
+}
+
+/*「こだわり」向けの設定*/
+.ta1 td .specialbox label {
+	float: left;
+	display: inline-block;
+	margin-right: 5px;
+}
+.ta1 td .specialbox img {
+	vertical-align: middle;
+}
+
+
+/*その他
+---------------------------------------------------------------------------*/
+.mb10 {margin-bottom: 10px !important;}
+.l {text-align: left !important;}
+.box {background: #eee;padding: 1rem 2rem;border-radius: 10px;}
+input {font-size: 1rem;}
