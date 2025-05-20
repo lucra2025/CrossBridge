@@ -170,7 +170,7 @@ body:not(.home) header #logo img {
 
 /*１つ目メニュー*/
 #header-menu ul li:nth-of-type(1) a {
-	border-bottom: 10px solid #0f61e9;	/*下線の幅、線種、色*/
+	border-bottom: 5px solid #0f61e9;	/*下線の幅、線種、色*/
 	color: #0f61e9;						/*文字色*/
 }
 
@@ -246,7 +246,7 @@ body:not(.home) header #logo img {
 	left: 0px;top: 0px;
 	width: 100%;		/*ブロックの幅。100%にすれば画面いっぱいに広がります。*/
 	height: 100%;	/*ブロックの高さ*/
-	padding: 120px 20px 20px;	/*上、左右、下へのブロック内の余白*/
+	padding: 200px 20px 20px;	/*上、左右、下へのブロック内の余白*/
 	background: #fff;			/*背景色*/
 	text-align: center;			/*テキストを中央に*/
 	animation: animation1 0.2s both;	/*animation.cssの、animation1を実行する。0.2sは0.2秒の事。*/
