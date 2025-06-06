@@ -168,6 +168,8 @@ body:not(.home) header #logo img {
 	margin-right: 0;	/*右側のマージンをなくす*/
 }
 
+
+
 /*１つ目メニュー*/
 #header-menu ul li:nth-of-type(1) a {
 	border-bottom: 5px solid #0f61e9;	/*下線の幅、線種、色*/
