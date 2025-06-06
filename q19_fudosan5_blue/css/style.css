@@ -172,19 +172,21 @@ body:not(.home) header #logo img {
 
 /*１つ目メニュー*/
 #header-menu ul li:nth-of-type(1) a {
-	text-indent: 3px;          /*行を下げる*/
+	text-indent: 10px;          /*行を下げる*/
 	border-bottom: 5px solid #0f61e9;	/*下線の幅、線種、色*/
 	color: #0f61e9;						/*文字色*/
 }
 
 /*２つ目メニュー*/
 #header-menu ul li:nth-of-type(2) a {
+	text-indent: 10px;          /*行を下げる*/
 	border-bottom: 5px solid #de1b37;	/*下線の幅、線種、色*/
 	color: #de1b37;						/*文字色*/
 }
 
 /*３つ目メニュー*/
 #header-menu ul li:nth-of-type(3) a {
+	text-indent: 10px;          /*行を下げる*/
 	border-bottom: 5px solid #df8903;	/*下線の幅、線種、色*/
 	color: #df8903;						/*文字色*/
 }
